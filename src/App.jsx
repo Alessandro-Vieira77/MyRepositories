@@ -1,9 +1,19 @@
-function App() {
-  return (
-    <>
-      <h1>Hello World!</h1>
-    </>
-  );
-}
+import { createBrowserRouter } from "react-router-dom";
 
-export default App;
+// pages
+import { Main } from "./pages/Main";
+import { Repositorio } from "./pages/Repositorio";
+
+const route = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main />,
+  },
+
+  {
+    path: "/repositorio/:repositorio",
+    element: <Repositorio />,
+  },
+]);
+
+export { route };
