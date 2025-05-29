@@ -79,7 +79,7 @@ export function Main() {
   return (
     <Container>
       <FaGithub size={25} />
-      <h1>Meus Repositorios</h1>
+      <h1>My Repositories</h1>
 
       <Form onSubmit={handleSubmit} error={alert}>
         <input
