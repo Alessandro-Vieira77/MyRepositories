@@ -13,7 +13,7 @@ Filters can be applied to display all issues, only open issues, or only closed i
 </p>
 
 <p align="center">
-     <a href="PROJECT__URL">📱 Visit this Project</a>
+     <a href="https://my-repositories-seven.vercel.app/">📱 Visit this Project</a>
 </p>
 
 <h2 id="layout">🎨 Layout</h2>
