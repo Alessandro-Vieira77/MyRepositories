@@ -1,12 +1,51 @@
-# React + Vite
+<h1 align="center" style="font-weight: bold;">GitHub repositories 💻</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+ <a href="#tech">Technologies</a> • 
+ <a href="#started">Getting Started</a> 
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+    <b>This is a project that uses GitHub's REST API to allow users to search and save their favorite repositories. The application provides access to the details of each repository, including basic information and its issues.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Filters can be applied to display all issues, only open issues, or only closed issues. The system also has pagination to facilitate navigation between multiple issues in a repository.</b>
 
-## Expanding the ESLint configuration
+</p>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<p align="center">
+     <a href="PROJECT__URL">📱 Visit this Project</a>
+</p>
+
+<h2 id="layout">🎨 Layout</h2>
+
+<p align="center">
+    <img src="https://i.imgur.com/QAtbaYL.png" alt="page home" width="400px">
+    <img src="https://i.imgur.com/htka36X.png" alt="page datail" width="400px">
+</p>
+
+<h2 id="technologies">💻 Technologies</h2>
+
+- react/vite
+- JavaScript
+- styled components
+- axios
+- react-router-dom
+
+<h2 id="started">🚀 Getting started</h2>
+
+Here you describe how to run your project locally
+
+<h3>Cloning</h3>
+
+How to clone your project
+
+```bash
+git clone https://github.com/Alessandro-Vieira77/MyRepositories.git
+```
+
+<h3>Starting</h3>
+
+```bash
+cd MyRepositories
+npm npm run dev
+```

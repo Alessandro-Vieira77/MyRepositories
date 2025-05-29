@@ -2,26 +2,29 @@ import { useState, useCallback, useEffect } from "react";
 import { Container, Form, SubmitButton, List, DeleteButton } from "./styles";
 import { FaGithub, FaPlus, FaSpinner, FaBars, FaTrash } from "react-icons/fa";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export function Main() {
   const [newRepo, setNewRepo] = useState("");
   const [repositorios, setRespositorios] = useState([]);
+
   const [loaging, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
 
-  // Buscar;
-  useEffect(() => {
-    const reposi = localStorage.getItem("repos");
-    if (reposi) {
-      setRespositorios(JSON.parse(reposi));
-      console.log(reposi, "local");
-    }
-  }, []);
-
   // Salvar alterações
   useEffect(() => {
-    localStorage.setItem("repos", JSON.stringify(repositorios));
+    if (repositorios.length > 0) {
+      localStorage.setItem("repositorio", JSON.stringify(repositorios));
+    }
   }, [repositorios]);
+
+  // Buscar;
+  useEffect(() => {
+    const reposi = localStorage.getItem("repositorio");
+    if (reposi) {
+      setRespositorios(JSON.parse(reposi));
+    }
+  }, []);
 
   function handleInputChange(e) {
     setNewRepo(e.target.value);
@@ -42,7 +45,7 @@ export function Main() {
               throw new Error("Repositorio duplicado");
             }
             const data = {
-              name: response.data.full_name,
+              name: response.data?.full_name,
             };
 
             setRespositorios([...repositorios, data]);
@@ -60,7 +63,7 @@ export function Main() {
       }
       submit();
     },
-    [newRepo, repositorios]
+    [repositorios, newRepo]
   );
 
   const handleDelete = useCallback(
@@ -104,9 +107,9 @@ export function Main() {
               </DeleteButton>
               {repo.name}
             </span>
-            <a href="#">
+            <Link to={`/repositorio/${encodeURIComponent(repo.name)}`}>
               <FaBars size={20} />
-            </a>
+            </Link>
           </li>
         ))}
       </List>

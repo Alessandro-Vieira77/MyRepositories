@@ -11,7 +11,7 @@ const route = createBrowserRouter([
   },
 
   {
-    path: "/repositorio/:repositorio",
+    path: "/repositorio/:nameRepo",
     element: <Repositorio />,
   },
 ]);
